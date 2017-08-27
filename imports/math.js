@@ -1,5 +1,9 @@
 console.log ('hello from math.js');
 
-export function add(a, b) {
+// export default function add(a, b) {
+//     return a + b;
+// }
+
+export default add = function (a, b) {
     return a + b;
 };

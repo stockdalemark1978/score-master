@@ -1,5 +1,4 @@
-import {greetUser, name} from './../imports/utils';
+import Default from './../imports/utils';
 
 console.log('hello from /client/main.js')
-console.log(greetUser());
-console.log(name);
+console.log(Default);
