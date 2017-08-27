@@ -4,6 +4,6 @@ console.log ('hello from math.js');
 //     return a + b;
 // }
 
-export default add = function (a, b) {
+export default function (a, b) {
     return a + b;
 };
