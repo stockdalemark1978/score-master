@@ -4,40 +4,8 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
 
-Tracker.autorun(function (){
-  console.log('Players list', Players.find().fetch());
-})
-
-
-
-
-
-const players = [{
-  _id: '1',
-  name: 'Mark',
-  score: -15
-}, {
-  _id: '2',
-  name: 'Lindsey',
-  score: 80
-}, {
-  _id: '3',
-  name: 'Cashie',
-  score: 150
-}, {
-  _id: '4',
-  name: 'Dean',
-  score: -2000
-}];
 
 const renderPlayers = function (players){
-
-    // let numbers = [{val: }, {val: 2}, {val: 3}];
-    //
-    // return numbers.map(function(number){
-    //   return <p key={number.val}>{number.val}</p>;
-    // });
-
     return players.map(function(player){
       return <p key={player._id}>{player.name} has {player.score} point(s)</p>;
     });
@@ -45,6 +13,8 @@ const renderPlayers = function (players){
 
 
 Meteor.startup(function (){
+  Tracker.autorun(function (){
+    let players = Players.find().fetch();
     let title = 'Score Master';
     let name = 'Mark';
     let jsx = (
@@ -56,4 +26,10 @@ Meteor.startup(function (){
         </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));
+  });
+  Players.insert({
+    name: 'Cashie',
+    score: 2500
+  });
+
 });
