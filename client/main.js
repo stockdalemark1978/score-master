@@ -14,6 +14,10 @@ const players = [{
   _id: '3',
   name: 'Cashie',
   score: 150
+}, {
+  _id: '4',
+  name: 'Dean',
+  score: -2000
 }];
 
 const renderPlayers = function (players){
@@ -25,10 +29,7 @@ const renderPlayers = function (players){
     // });
 
     return players.map(function(player){
-      return (
-        <div key={player._id}>
-          <p >{player.name} has {player.score} point(s)</p>
-        </div>);
+      return <p key={player._id}>{player.name} has {player.score} point(s)</p>;
     });
 };
 
