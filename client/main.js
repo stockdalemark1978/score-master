@@ -17,6 +17,10 @@ const handleSubmit = function (e) {
 
   if (playerName) {
     e.target.playerName.value = '';
+    Players.insert({
+      name: playerName,
+      score: 0
+    });
 
   }
 };
@@ -40,9 +44,6 @@ Meteor.startup(function (){
     );
     ReactDOM.render(jsx, document.getElementById('app'));
   });
-  Players.insert({
-    name: 'Cashie',
-    score: 2500
-  });
+
 
 });
