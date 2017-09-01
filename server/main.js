@@ -3,11 +3,14 @@ import {Players} from './../imports/api/players';
 
 Meteor.startup(() => {
   class Person {
-    constructor(name) {
+    constructor(name = 'Anonymous') {
       this.name = name;
+    }
+    getGreeting() {
+      return `Hello! My name is ${this.name}.`;
     }
   }
 
   let me = new Person('Mark');
-  console.log(me);
+  console.log(me.getGreeting());
 });
