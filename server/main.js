@@ -32,12 +32,23 @@ Meteor.startup(() => {
     }
   }
 
-  let me = new Employee('Mark', 38, 'db admin');
-  console.log(me.getPersonDescription());
+  class Programmer extends Person {
+    constructor(name, age, language = 'assembly') {
+      super(name, age);
+      this.language = language;
+    }
+    getGreeting() {
+
+        return `Hello, my name is ${this.name} and I am a ${this.language} developer. `
+
+    }
+  }
+
+  let me = new Programmer('Mark', 38);
+
   console.log(me.getGreeting());
 
-  let somebodyElse = new Employee('Lindsey', 35);
 
-  console.log(somebodyElse.getPersonDescription());
-  console.log(somebodyElse.getGreeting());
+  let someGuy = new Programmer ('Larry', 49, 'Javascript');
+  console.log(someGuy.getGreeting());
 });
