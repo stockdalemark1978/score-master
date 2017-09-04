@@ -4,6 +4,8 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
+import AddPlayer from './../imports/ui/AddPlayer';
+
 
 
 const renderPlayers = (players) => {
@@ -46,8 +48,8 @@ Meteor.startup(() => {
     let jsx = (
         <div>
             <TitleBar/>
-
             {renderPlayers(players)}
+            <AddPlayer/>
             <form onSubmit={handleSubmit}>
               <input type="text" name="playerName" placeholder="Enter Player Name"/>
               <button>Add Player</button>
