@@ -36,16 +36,24 @@ const handleSubmit = (e) => {
   }
 };
 
+class TitleBar extends React.Component{
+  render() {
+    return (
+      <div>
+        <h1>Score Master</h1>
+      </div>
+    )
+  }
+}
+
 Meteor.startup(() => {
   Tracker.autorun(() => {
     let players = Players.find().fetch();
     let title = 'Score Master';
-    let name = 'Mark';
     let jsx = (
         <div>
-            <h1>{title}</h1>
-            <p>Hi {name}!</p>
-            <p>This is my second p.</p>
+            <TitleBar/>
+
             {renderPlayers(players)}
             <form onSubmit={handleSubmit}>
               <input type="text" name="playerName" placeholder="Enter Player Name"/>
