@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
+import TitleBar from './../imports/ui/TitleBar';
 
 
 const renderPlayers = (players) => {
@@ -36,15 +37,7 @@ const handleSubmit = (e) => {
   }
 };
 
-class TitleBar extends React.Component{
-  render() {
-    return (
-      <div>
-        <h1>Score Master</h1>
-      </div>
-    )
-  }
-}
+
 
 Meteor.startup(() => {
   Tracker.autorun(() => {
