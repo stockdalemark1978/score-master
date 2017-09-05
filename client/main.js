@@ -47,7 +47,7 @@ Meteor.startup(() => {
     let title = 'Score Master';
     let jsx = (
         <div>
-            <TitleBar/>
+            <TitleBar title={title}/>
             {renderPlayers(players)}
             <AddPlayer/>
             <form onSubmit={handleSubmit}>

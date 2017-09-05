@@ -6,6 +6,6 @@ export default class AddPlayer extends React.Component {
       <div>
         <p>Add Player here</p>
       </div>
-    )
+    );
   }
-}
+};
