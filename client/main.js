@@ -45,9 +45,10 @@ Meteor.startup(() => {
   Tracker.autorun(() => {
     let players = Players.find().fetch();
     let title = 'Score Master';
+    let subTitle = 'Created By Mark Stockdale';
     let jsx = (
         <div>
-            <TitleBar title={title}/>
+            <TitleBar title={title} subTitle={subTitle}/>
             {renderPlayers(players)}
             <AddPlayer/>
             <form onSubmit={handleSubmit}>
