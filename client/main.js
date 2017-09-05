@@ -25,21 +25,6 @@ const renderPlayers = (players) => {
     });
 };
 
-const handleSubmit = (e) => {
-  let playerName = e.target.playerName.value;
-  e.preventDefault();
-
-  if (playerName) {
-    e.target.playerName.value = '';
-    Players.insert({
-      name: playerName,
-      score: 0
-    });
-
-  }
-};
-
-
 
 Meteor.startup(() => {
   Tracker.autorun(() => {
@@ -51,10 +36,7 @@ Meteor.startup(() => {
             <TitleBar title={title} subTitle={subTitle}/>
             {renderPlayers(players)}
             <AddPlayer/>
-            <form onSubmit={handleSubmit}>
-              <input type="text" name="playerName" placeholder="Enter Player Name"/>
-              <button>Add Player</button>
-            </form>
+
         </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));
