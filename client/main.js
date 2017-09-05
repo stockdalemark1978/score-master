@@ -5,23 +5,14 @@ import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
+import Player from './../imports/ui/Player';
 
 
 
 const renderPlayers = (players) => {
     return players.map((player) => {
-      return (
-        <p key={player._id}>
-          {player.name} has {player.score} point(s).
-          <button onClick={() => {
-            Players.update(player._id, {$inc:{score: 1}});
-          }}>+1</button>
-          <button onClick={() => {
-            Players.update(player._id, {$inc:{score: -1}});
-          }}>-1</button>
-          <button onClick={() => Players.remove(player._id)}>X</button>
-        </p>
-      );
+      return <Player key={player._id} />;
+
     });
 };
 
