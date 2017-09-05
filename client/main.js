@@ -11,7 +11,7 @@ import Player from './../imports/ui/Player';
 
 const renderPlayers = (players) => {
     return players.map((player) => {
-      return <Player key={player._id} />;
+      return <Player key={player._id} player={player}/>;
 
     });
 };
