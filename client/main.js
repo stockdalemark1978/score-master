@@ -6,7 +6,7 @@ import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
 import Player from './../imports/ui/Player';
-
+import PlayerList from './../imports/ui/PlayerList';
 
 
 const renderPlayers = (players) => {
@@ -26,6 +26,7 @@ Meteor.startup(() => {
         <div>
             <TitleBar title={title} subTitle={subTitle}/>
             {renderPlayers(players)}
+            <PlayerList/>
             <AddPlayer/>
 
         </div>
