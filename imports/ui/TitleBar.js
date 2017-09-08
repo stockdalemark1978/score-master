@@ -10,7 +10,7 @@ export default class TitleBar extends React.Component{
   }
   render() {
     return (
-      <div>
+      <div className="title-bar">
         <h1>{this.props.title}</h1>
         {this.renderSubtitle()}
       </div>
