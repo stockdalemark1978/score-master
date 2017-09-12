@@ -6,7 +6,7 @@ export default class PlayerList extends React.Component {
   renderPlayers() {
     if (this.props.players.length === 0) {
       return (
-        <div>
+        <div className="item">
           <p>No players have been added. Please add your first player.</p>
         </div>
       );
