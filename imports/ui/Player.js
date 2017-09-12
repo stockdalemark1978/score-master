@@ -5,7 +5,7 @@ export default class Player extends React.Component {
 
   render() {
     return (
-        <p key={this.props.player._id}>
+        <p className="wrapper" key={this.props.player._id}>
           {this.props.player.name} has {this.props.player.score} point(s).
           <button onClick={() => {
             Players.update(this.props.player._id, {$inc:{score: 1}});
