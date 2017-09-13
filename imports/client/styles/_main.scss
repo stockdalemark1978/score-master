@@ -9,7 +9,7 @@ html {
 
 body {
   background: rgb(201, 201, 201);
-  color: #32322C;
+  color: #777777;
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
 }
@@ -24,3 +24,4 @@ h1 {
 @import './components/_wrapper';
 @import './components/_title-bar';
 @import './components/_item';
+@import './components/_button';
