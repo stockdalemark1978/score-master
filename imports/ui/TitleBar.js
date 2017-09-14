@@ -13,6 +13,7 @@ export default class TitleBar extends React.Component{
       <div className="title-bar">
         <div className="wrapper">
           <h1>{this.props.title}</h1>
+          <h2 className="subtitle">{this.props.subtitle}</h2>
           {this.renderSubtitle()}
         </div>
       </div>
