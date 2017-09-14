@@ -4,7 +4,7 @@ export default class TitleBar extends React.Component{
   renderSubtitle() {
     if (this.props.subTitle) {
       return (
-          <h2>{this.props.subTitle}</h2>
+          <h2 className="title-bar__subtitle">{this.props.subTitle}</h2>
       );
     }
   }
@@ -13,7 +13,6 @@ export default class TitleBar extends React.Component{
       <div className="title-bar">
         <div className="wrapper">
           <h1>{this.props.title}</h1>
-          <h2 className="subtitle">{this.props.subtitle}</h2>
           {this.renderSubtitle()}
         </div>
       </div>
