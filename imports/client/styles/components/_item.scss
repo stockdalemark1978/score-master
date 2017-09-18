@@ -6,13 +6,16 @@
 }
 
 .item--position-1 {
-  background: rgb(62, 121, 199);
+  background: $blue;
+  border-color: $blue-alt;
 }
 .item--position-2 {
-  background: rgb(201, 89, 89);
+  background: $red;
+  border-color: $red-alt;
 }
 .item--position-3 {
-  background: rgba(207, 192, 92, 0.96);
+  background: $yellow;
+  border-color: $yellow-alt;
 }
 
 .item__message {
